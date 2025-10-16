@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebapp-deployment
+  labels:
+    app: mywebapp
+spec:
+  replicas: 1   # Adjust number of replicas as needed
+  selector:
+    matchLabels:
+      app: mywebapp
+  template:
+    metadata:
+      labels:
+        app: mywebapp
+    spec:
+      containers:
+      - name: mywebapp-container
+        image: gyan9456/newappmicro:latest # Replace with your Docker Hub username and image name
+        ports:
+        - containerPort: 80

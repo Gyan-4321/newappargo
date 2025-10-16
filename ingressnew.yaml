@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mywebapp-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx   # Replace with your Ingress class name if different
+  rules:
+  - host: app.gyancloud.online   # Replace with your desired hostname
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: mywebapp-service
+            port:
+              number: 80
