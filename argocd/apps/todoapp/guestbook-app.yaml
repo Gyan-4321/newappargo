@@ -4,7 +4,7 @@ metadata:
   name: guestbook
   namespace: argocd
 spec:
-  project: todoapp
+  project: default
   source:
     repoURL: https://github.com/Gyan-4321/newappargo
     targetRevision: HEAD
@@ -16,4 +16,5 @@ spec:
     automated:
       selfHeal: true
       prune: true
+
 
