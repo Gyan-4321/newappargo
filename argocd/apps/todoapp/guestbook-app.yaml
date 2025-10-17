@@ -4,14 +4,14 @@ metadata:
   name: guestbook
   namespace: argocd
 spec:
-  project: default
+  project: todoapp
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps
+    repoURL: https://github.com/Gyan-4321/newappargo
     targetRevision: HEAD
-    path: guestbook
+    path: argocd
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: dev
   syncPolicy:
     automated:
       selfHeal: true
