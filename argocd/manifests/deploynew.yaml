@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mywebapp-container
-        image: gyan9456/newmicroapp:latest # Replace with your Docker Hub username and image name
+        image: gyan9456/newappmicro:latest # Replace with your Docker Hub username and image name
         ports:
         - containerPort: 80
